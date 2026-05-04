@@ -1,11 +1,20 @@
-nest eggs
-nest basket
+nest outer
+feed cluck cluck cluck
 
-feed eggs cluck cluck cluck cluck
+strut
+nest inner
+feed cluck cluck
 
-coop eggs
-    bok basket
-    peck eggs
+roam outer
+coop
+    peck
+
+    roam inner
+    coop
+        peck
+    roost
+
+    roam outer
 roost
 
-cluck basket
+cluck
