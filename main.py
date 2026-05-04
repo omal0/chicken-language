@@ -46,6 +46,29 @@ def execute(statements, state):
             while tape[state["pointer"]] != 0:
                 execute(body, state)
 
+        elif kind == "scratch":
+            pointer = state["pointer"]
+            print(f"[scratch] pointer={pointer}, value={tape[pointer]}, labels={labels}")
+
+        elif kind == "crow":
+            print(chr(tape[state["pointer"]]), end="")
+
+        elif kind == "crack":
+            print()
+
+        elif kind == "hatch":
+            tape[state["pointer"]] = 0
+
+        elif kind == "if":
+            body = stmt[1]
+            if tape[state["pointer"]] != 0:
+                execute(body, state)
+
+        elif kind == "ifzero":
+            body = stmt[1]
+            if tape[state["pointer"]] == 0:
+                execute(body, state)
+
 def parse_block(lines, i=0, inside_loop=False):
     statements = []
 
@@ -70,6 +93,10 @@ def parse_block(lines, i=0, inside_loop=False):
         elif cmd == "coop":
             body, i = parse_block(lines, i + 1, inside_loop=True)
             statements.append(("loop", body))
+
+        elif cmd == "ifcoop":
+            body, i = parse_block(lines, i + 1, inside_loop=True)
+            statements.append(("if", body))
 
         elif cmd == "nest":
             statements.append(("nest", tokens[1]))
@@ -103,6 +130,31 @@ def parse_block(lines, i=0, inside_loop=False):
         elif cmd == "cluck":
             statements.append(("cluck",))
             i += 1
+
+        elif cmd == "scratch":
+            statements.append(("scratch",))
+            i += 1
+
+        elif cmd == "crow":
+            statements.append(("crow",))
+            i += 1
+
+        elif cmd == "lay":
+            value = int(tokens[1])
+            statements.append(("feed", value))
+            i += 1
+
+        elif cmd == "crack":
+            statements.append(("crack",))
+            i += 1
+
+        elif cmd == "hatch":
+            statements.append(("hatch",))
+            i += 1
+
+        elif cmd == "ifzero":
+            body, i = parse_block(lines, i + 1, inside_loop=True)
+            statements.append(("ifzero", body))
 
         else:
             print(f"Unknown command: {line}")

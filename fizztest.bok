@@ -1,0 +1,21 @@
+# counter starts at 3
+nest counter
+lay 3
+
+# decrement 3 times
+peck
+peck
+peck
+
+# if counter is zero, print Fizz
+ifzero
+    lay 70
+    crow
+    lay 105
+    crow
+    lay 122
+    crow
+    lay 122
+    crow
+    crack
+roost

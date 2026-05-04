@@ -1,0 +1,20 @@
+nest counter
+lay 5
+
+peck
+peck
+peck
+peck
+peck
+
+ifzero
+    lay 66
+    crow
+    lay 117
+    crow
+    lay 122
+    crow
+    lay 122
+    crow
+    crack
+roost

@@ -1,0 +1,92 @@
+# Cells:
+# num, remaining, c3, c5, flag
+
+nest num
+lay 1
+
+strut
+nest remaining
+lay 100
+
+strut
+nest c3
+lay 3
+
+strut
+nest c5
+lay 5
+
+strut
+nest flag
+hatch
+
+roam remaining
+coop
+    # reset printed flag
+    roam flag
+    hatch
+
+    # c3 countdown
+    roam c3
+    peck
+
+    ifzero
+        lay 70
+        crow
+        lay 105
+        crow
+        lay 122
+        crow
+        lay 122
+        crow
+
+        roam flag
+        lay 1
+
+        roam c3
+        lay 3
+    roost
+
+    # c5 countdown
+    roam c5
+    peck
+
+    ifzero
+        lay 66
+        crow
+        lay 117
+        crow
+        lay 122
+        crow
+        lay 122
+        crow
+
+        roam flag
+        lay 1
+
+        roam c5
+        lay 5
+    roost
+
+    # if nothing printed, print the number
+    roam flag
+    ifzero
+        roam num
+        cluck
+        roam flag
+    roost
+
+    # if something printed, print newline
+    roam flag
+    ifcoop
+        crack
+    roost
+
+    # next number
+    roam num
+    bok
+
+    # remaining--
+    roam remaining
+    peck
+roost
