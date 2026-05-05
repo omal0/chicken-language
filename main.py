@@ -2,7 +2,6 @@ import sys
 
 statements = []
 
-
 def count_clucks(tokens):
     return sum(1 for t in tokens if t == "cluck")
 
