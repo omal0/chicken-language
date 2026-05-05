@@ -1,20 +1,102 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <title>Chicken Language</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background: #111;
+                color: #f5f5f5;
+                text-align: center;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 80px auto;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 3em;
+                margin-bottom: 10px;
+            }
+
+            p.subtitle {
+                color: #aaa;
+                margin-bottom: 40px;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 12px 24px;
+                margin: 10px;
+                font-size: 16px;
+                color: white;
+                background: #ff6b00;
+                text-decoration: none;
+                border-radius: 6px;
+                transition: 0.2s;
+            }
+
+            .btn:hover {
+                background: #ff8c33;
+            }
+
+            pre {
+                background: #1e1e1e;
+                padding: 20px;
+                border-radius: 8px;
+                text-align: left;
+                overflow-x: auto;
+                margin-top: 30px;
+            }
+
+            .section-title {
+                margin-top: 60px;
+                font-size: 1.5em;
+                color: #ddd;
+            }
+
+            footer {
+                margin-top: 60px;
+                color: #666;
+                font-size: 14px;
+            }
+        </style>
     </head>
     <body>
-        <h1>Chicken Language</h1>
-        <p>A tiny chicken-themed programming language.</p>
+        <div class="container">
+            <h1>🐔 Chicken Language</h1>
+            <p class="subtitle">
+                A tiny chicken-themed esoteric programming language
+            </p>
 
-        <h2>Files</h2>
-        <ul>
-            <li><a href="main.py">main.py</a></li>
-            <li><a href="fizzbuzz.bok">fizzbuzz.bok</a></li>
-            <li><a href="buzztest.bok">buzztest.bok</a></li>
-            <li><a href="fizztest.bok">fizztest.bok</a></li>
-            <li><a href="test.bok">test.bok</a></li>
-        </ul>
+            <a
+                class="btn"
+                href="https://github.com/omal0/chicken-language"
+                target="_blank"
+            >
+                View on GitHub
+            </a>
+
+            <div class="section-title">Hello World</div>
+
+            <pre><code>
+# prints "Hello"
+
+lay 72 crow
+lay 101 crow
+lay 108 crow
+lay 108 crow
+lay 111 crow
+crack
+    </code></pre>
+
+            <footer>Built with pure poultry logic 🐔</footer>
+        </div>
     </body>
 </html>
