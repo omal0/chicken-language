@@ -7,7 +7,7 @@ symbols with poultry.
 
 ------------------------------------------------------------------------
 
-## 🧠 Overview
+## Overview
 
 Chicken Language operates on a **linear memory tape** of cells and a
 **pointer** that moves across them.
@@ -21,7 +21,7 @@ commands**
 
 ------------------------------------------------------------------------
 
-## 🚀 Running Programs
+## Running Programs
 
 ``` bash
 python main.py program.bok
@@ -31,9 +31,9 @@ Programs use the `.bok` file extension.
 
 ------------------------------------------------------------------------
 
-## 🧱 Language Semantics
+## Language Semantics
 
-### 🧮 Memory Model
+### Memory Model
 
 -   Tape size: **30,000 cells**
 -   Each cell stores an integer
@@ -42,9 +42,9 @@ Programs use the `.bok` file extension.
 
 ------------------------------------------------------------------------
 
-## 🐔 Core Commands
+## Core Commands
 
-### ➕ Value Manipulation
+### Value Manipulation
 
   Command                  Description
   ------------------------ ---------------------------------
@@ -56,7 +56,7 @@ Programs use the `.bok` file extension.
 
 ------------------------------------------------------------------------
 
-### 👉 Pointer Movement
+### Pointer Movement
 
   Command     Description
   ----------- --------------------
@@ -65,7 +65,7 @@ Programs use the `.bok` file extension.
 
 ------------------------------------------------------------------------
 
-### 📢 Output
+### Output
 
   Command     Description
   ----------- ---------------------------------------
@@ -76,7 +76,7 @@ Programs use the `.bok` file extension.
 
 ------------------------------------------------------------------------
 
-## 🔁 Control Flow
+## Control Flow
 
 Chicken Language uses **block-based control flow** with:
 
@@ -99,7 +99,7 @@ Chicken Language uses **block-based control flow** with:
 
 ------------------------------------------------------------------------
 
-## 🪺 Labels & Named Cells
+## Labels & Named Cells
 
 Unlike raw Brainfuck, Chicken Language lets you name memory locations.
 
@@ -110,7 +110,7 @@ Unlike raw Brainfuck, Chicken Language lets you name memory locations.
 
 ------------------------------------------------------------------------
 
-## ✍️ Syntax Rules
+## Syntax Rules
 
 -   Commands are separated by whitespace
 -   One command per line is recommended (but not required)
@@ -118,7 +118,7 @@ Unlike raw Brainfuck, Chicken Language lets you name memory locations.
 
 ------------------------------------------------------------------------
 
-## 🐣 Hello World Example
+## 🐣 Hello Example
 
 ``` bok
 # prints "Hello"
@@ -130,14 +130,6 @@ lay 108 crow
 lay 111 crow
 crack
 ```
-
-------------------------------------------------------------------------
-
-## 🧬 Design Philosophy
-
--   🐔 Simple
--   🧠 Low-level
--   😂 Playful
 
 ------------------------------------------------------------------------
 
